@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FluentBit - The ultimate logging and metrics processor for cloud and containerized environments. Learn about FluentBit operations and compare Promtail vs FluentBit.">
+    <title>FluentBit - Cloud-Native Logging & Metrics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-water"></i>
+                    <span>FluentBit</span>
+                </a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://github.com/kinseydarow/FluentBit" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="download.html" class="btn-download">Download</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Fast & Lightweight Log Processor</h1>
+                <p class="hero-subtitle">FluentBit is a super fast, lightweight, and highly scalable logging and metrics processor for cloud and containerized environments.</p>
+                <div class="hero-buttons">
+                    <a href="https://fluentbit.net/" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Visit Official Site
+                    </a>
+                    <a href="download.html" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Get Started
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>[SERVICE]
+    Flush        5
+    Daemon       Off
+    Log_Level    info
+
+[INPUT]
+    Name         cpu
+    Tag          system.cpu
+
+[OUTPUT]
+    Name         stdout
+    Match        *</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose FluentBit?</h2>
+                <p>Powerful features designed for modern cloud-native applications</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>High Performance</h3>
+                    <p>Built from the ground up with performance in mind. Process thousands of logs per second with minimal CPU and memory footprint.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Lightweight</h3>
+                    <p>Zero dependencies with a tiny footprint of ~450KB. Perfect for embedded systems and containerized environments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Pluggable Architecture</h3>
+                    <p>Extensible plugin system supporting multiple inputs, filters, and outputs. Integrate with your existing infrastructure seamlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Native</h3>
+                    <p>Designed for Kubernetes, Docker, and cloud environments. First-class support for modern orchestration platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Ready</h3>
+                    <p>Production-grade reliability with TLS support, data buffering, and automatic retry mechanisms for mission-critical workloads.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Open Source</h3>
+                    <p>Licensed under Apache 2.0 with an active community. Transparent development and enterprise support available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="content-row">
+                <div class="content-text">
+                    <h2>Understanding FluentBit Operations</h2>
+                    <p>When working with <a href="https://fluentbit.net/">fluentbit</a>, understanding core operations is crucial for optimal performance. FluentBit provides a robust framework for collecting, processing, and routing logs and metrics across distributed systems.</p>
+                    <p>To maximize efficiency in your logging infrastructure, it's essential to follow <a href="https://fluentbit.net/fluent-bit-operations-and-best-practices/">best fluentbit operations</a> guidelines. These practices cover configuration optimization, resource management, and scaling strategies that ensure your logging pipeline remains reliable under heavy workloads.</p>
+                    <p>The architecture is built around three core components: inputs for data collection, filters for processing and enrichment, and outputs for data delivery. This modular design allows teams to customize their logging pipeline according to specific requirements while maintaining high performance and reliability.</p>
+                </div>
+                <div class="content-visual">
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <div class="stat-number">450KB</div>
+                            <div class="stat-label">Binary Size</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Events/Sec</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">70+</div>
+                            <div class="stat-label">Plugins</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Open Source</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-row reverse">
+                <div class="content-visual">
+                    <div class="comparison-box">
+                        <div class="vs-badge">VS</div>
+                        <div class="compare-items">
+                            <div class="compare-item">
+                                <i class="fas fa-water"></i>
+                                <span>FluentBit</span>
+                            </div>
+                            <div class="compare-item">
+                                <i class="fas fa-stream"></i>
+                                <span>Promtail</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <h2>FluentBit vs Promtail: Making the Right Choice</h2>
+                    <p>When evaluating logging solutions, many teams find themselves comparing <a href="https://fluentbit.net/promtail-vs-fluent-bit-which-is-right-for-you/">promtail vs fluentbit</a>. Both tools serve the log aggregation space but with different philosophies and capabilities.</p>
+                    <p>FluentBit offers broader ecosystem support with 70+ plugins for various inputs and outputs, making it ideal for heterogeneous environments. Its vendor-neutral approach means you can route logs to multiple destinations including Elasticsearch, Kafka, Splunk, and cloud-native services.</p>
+                    <p>While Promtail is tightly integrated with the Grafana Loki stack, FluentBit provides flexibility for organizations that need multi-vendor support or plan to migrate between different logging backends. The choice ultimately depends on your infrastructure requirements, existing toolchain, and scalability needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of organizations using FluentBit for cloud-native logging</p>
+                <div class="cta-buttons">
+                    <a href="download.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-download"></i> Download Now
+                    </a>
+                    <a href="https://fluentbit.net/" target="_blank" class="btn btn-secondary btn-large">
+                        <i class="fas fa-book"></i> View Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-water"></i>
+                        <span>FluentBit</span>
+                    </div>
+                    <p>Fast, lightweight, and highly scalable logging for cloud-native environments.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/kinseydarow/FluentBit" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://fluentbit.net/" target="_blank">Documentation</a></li>
+                        <li><a href="https://github.com/kinseydarow/FluentBit" target="_blank">GitHub</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest updates and releases</p>
+                    <a href="contact.html" class="btn btn-outline">Subscribe</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FluentBit. All rights reserved.</p>
+                <p>Designed & Developed by <span class="highlight">Kinsey Darow</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
